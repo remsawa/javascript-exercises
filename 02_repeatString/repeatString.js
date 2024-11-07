@@ -13,7 +13,7 @@ function getRandomNumber () {
   return number;
 }
 //I'm unsure why calling getRandomNumber passes the test only without the () here
-repeatString('odin', getRandomNumber);
+repeatString('', getRandomNumber);
 
 // Do not edit below this line
 module.exports = repeatString;
