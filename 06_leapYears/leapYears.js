@@ -1,13 +1,16 @@
 const leapYears = function(year) {
-  if (year % 4 === 0 &&
-      year % 100 === 0 && year % 400 === 0||
-     year % 4 === 0) {
+  let divBy4 = year % 4 === 0;
+  let divBy100 = year % 100 === 0;
+  let divBy400 = year % 400 === 0
+  if (divBy4 ||
+      divBy4 && divBy100 && divBy400) {
       return true;
-  } else if (year % 4 !== 0 ||
-             year % 100 === 0){
-      return false;
+  } else if (!divBy4 ||
+             divBy100) {
+    return false;
   }
 }
-leapYears(1996);
+leapYears(2000);
+
 // Do not edit below this line
 module.exports = leapYears;
