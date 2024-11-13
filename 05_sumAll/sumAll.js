@@ -7,7 +7,9 @@ const sumAll = function(int1, int2) {
   if (typeof int1 != 'number' ||
       typeof int2 != 'number' ||
       int1 < 0 ||
-      int2 < 0) {
+      int2 < 0 ||
+      Number.isInteger(int1) == false ||
+      Number.isInteger(int2) == false) {
       return 'ERROR';
   } else {
      if (int1 > int2) {
@@ -31,7 +33,7 @@ const sumAll = function(int1, int2) {
       return sum;
   }
 }
-sumAll(1, 4);
+sumAll(2.5, 4);
 
 // Do not edit below this line
 module.exports = sumAll;
