@@ -1,8 +1,13 @@
-const add = function() {
-	
+const numbers = [];
+
+const add = function(...numToCalc) {
+    numbers.push(...numToCalc);
+	return numbers[0] + numbers[1];
 };
 
-const subtract = function() {
+const subtract = function(...numToCalc) {
+    numbers.push(...numToCalc);
+	return numbers[0] - numbers[1];
 	
 };
 
@@ -21,6 +26,9 @@ const power = function() {
 const factorial = function() {
 	
 };
+
+//add(2, 6);
+subtract(-10, -4);
 
 // Do not edit below this line
 module.exports = {
