@@ -48,16 +48,20 @@ const multiply = function(numToCalc) {
 
 };
 
-const power = function() {
-	
+const power = function(...numToCalc) {
+  const numbers = [];
+numbers.push(...numToCalc);
+   calc = numbers[0] ** numbers[1]; 
+  return calc;
 };
+
 
 const factorial = function() {
 	
 };
 
 
-multiply([2, 4, 6, 8, 10, 12, 14]);
+power(3, 10);
 
 // Do not edit below this line
 module.exports = {
