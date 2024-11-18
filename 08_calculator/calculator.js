@@ -56,12 +56,23 @@ numbers.push(...numToCalc);
 };
 
 
-const factorial = function() {
-	
+const factorial = function(numToCalc) {
+    if(numToCalc === 0){
+      calc = 1;
+    } else {
+        const numbers = [];
+        for(let i = numToCalc; i >= 1; i--){
+            numbers.push(i)
+            //console.log(numbers);
+        } 
+        const factorialNum = (a, b) => a * b;
+        calc = numbers.reduce(factorialNum);
+    }
+  return calc;
 };
 
 
-power(3, 10);
+factorial(10);
 
 // Do not edit below this line
 module.exports = {
