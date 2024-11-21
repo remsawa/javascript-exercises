@@ -1,4 +1,5 @@
 const fibonacci = function(number) {
+  number = Number(number);
   let answer;
   const fibSeq = [0];
   function makeFibSeq() {
@@ -11,14 +12,17 @@ const fibonacci = function(number) {
           let newNum = num1 + num2;
           fibSeq.push(newNum);
       }
-     
   }
   makeFibSeq();
-  console.log(fibSeq);
   answer = fibSeq[fibSeq.length -1];
+  if (number === 0){
+      answer = 0;
+  } else if (number < 0) {
+      answer = "OOPS";
+  }
 
   return answer;
 };
-fibonacci(6);
+fibonacci("0");
 // Do not edit below this line
 module.exports = fibonacci;
